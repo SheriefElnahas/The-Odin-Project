@@ -12,6 +12,8 @@
   margin: 0;
 }
 
+/******* || GENERAL STYLES ||  ***********/
+
 body {
   font-family: 'Roboto', sans-serif;
   background: rgb(43, 36, 36);
@@ -20,8 +22,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-
 
 h1,
 h2 {
@@ -49,7 +49,7 @@ img {
   height: auto;
 }
 
-
+/******* || HERO SECTION ||  ***********/
 
 .hero__heading {
   text-align: center;
@@ -62,13 +62,15 @@ img {
   border: 5px solid cyan;
 }
 
+/******* || Drinks Section ||  ***********/
+
 .drinks {
   text-align: center;
   margin: 2rem 0;
 }
 .drinks__list {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 .drinks__heading {
@@ -86,7 +88,7 @@ img {
   color: hsl(39, 100%, 48%);
 }
 
-/* RECIPE */
+/******* || RECIPE  Section ||  ***********/
 .recipe {
   background: #23485f;
   margin: 2rem 0;
@@ -105,7 +107,7 @@ img {
   object-fit: cover;
   border-radius: 15px;
   margin: 0 auto 3rem;
-  border:5px solid cyan;
+  border: 5px solid cyan;
 }
 
 hr {
