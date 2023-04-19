@@ -131,3 +131,25 @@ dd:not(:last-child) {
   border-bottom:1px solid #00ffff;
   padding-bottom:1rem;
 }
+
+.button-container {
+  text-align: center;
+}
+.go__home {
+
+  text-align: center;
+  display:inline-block;
+  background:hsl(180, 100%, 50%);
+  color:#000;
+  margin-top:1rem;
+  padding:0.6rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius:10px;
+
+}
+
+.go__home:hover {
+  background:hsl(180, 100%, 45%);
+}
