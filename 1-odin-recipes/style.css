@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
 
 /* || RESET || */
 *,
@@ -15,20 +16,31 @@ body {
   font-family: 'Roboto', sans-serif;
   background: rgb(43, 36, 36);
   color: #fff;
-  line-height: 1.5;
-  max-width:1200px;
-  margin:0 auto;
+  line-height: 1.7;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 
 
+h1,
+h2 {
+  font-family: 'Suez One', serif;
+  margin-bottom: 0.5rem;
+  color: cyan;
+  letter-spacing: 2px;
+}
+p {
+  font-size: 15px;
+}
+ul {
+  padding-left: 3rem;
+}
+ul li {
+  padding: 0.3rem;
+}
 a {
   text-decoration: none;
-}
-
-ol,
-ul {
-  list-style: none;
 }
 
 img {
@@ -37,45 +49,65 @@ img {
   height: auto;
 }
 
-h1,h2 {
-  color:cyan;
-}
-
 
 
 .hero__heading {
   text-align: center;
-  font-size:3.5rem; 
-  margin:1rem 0;
-  color:cyan;
+  font-size: 3.5rem;
+  margin: 1rem 0;
+  color: cyan;
 }
 
 .hero__img {
-
-
-  border:5px solid cyan;
+  border: 5px solid cyan;
 }
 
 .drinks {
   text-align: center;
-  margin:2rem 0;
+  margin: 2rem 0;
 }
-
+.drinks__list {
+  padding:0;
+  margin:0;
+  list-style: none;
+}
 .drinks__heading {
-  font-size:2rem;
-  margin-bottom:1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
-
-
-
 
 .drinks__link {
-  color:hsl(39, 100%, 68%);
-  display:inline-block;
-  padding:0.2rem;
-
+  color: hsl(39, 100%, 68%);
+  display: inline-block;
+  padding: 0.2rem;
 }
 
 .drinks__link:hover {
-  color:hsl(39, 100%, 48%);
+  color: hsl(39, 100%, 48%);
+}
+
+/* RECIPE */
+.recipe {
+  background: #23485f;
+  margin: 2rem 0;
+  border-radius: 15px;
+  padding: 0 1.5rem 3rem 1.5rem;
+}
+
+.recipe__heading--main {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 3.5rem;
+}
+
+.recipe__img {
+  width: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 0 auto 3rem;
+  border:5px solid cyan;
+}
+
+hr {
+  margin: 1rem 0;
 }
