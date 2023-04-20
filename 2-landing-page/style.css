@@ -1,0 +1,51 @@
+/******* || VARIABLES ||  ***********/
+:root {
+  /* || Colors || */
+  --dark-color: #1f2937;
+  --primary-white: #F9FAF8;
+  --secondary-white:#E5E7EB;
+  --btn-color:#3882F6;
+
+  /* || Typography || */
+  --h1-size:48px;
+  --h2-size:36px;
+  --p-large-size:18px;
+  --logo-text-size:24px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+/******* || RESET ||  ***********/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/******* || GENERAL STYLES ||  ***********/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: rgb(43, 36, 36);
+  color: #fff;
+  line-height: 1.7;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/******* || HERO SECTION ||  ***********/
