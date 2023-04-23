@@ -57,6 +57,7 @@ img {
   max-width: 100%;
   display: block;
   height: auto;
+
 }
 
 /******* || UTILITY CLASSES ||  ***********/
@@ -150,11 +151,15 @@ img {
 }
 
 .hero__heading {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 0.7rem;
   margin-top: 0;
 
   margin-top: -1.3rem;
+}
+
+.hero__heading span {
+  display:block;
 }
 
 .hero__paragraph {
@@ -163,8 +168,10 @@ img {
 }
 
 .hero__img {
-  width: 50%;
-  height: 350px;
+
+  width:450px;
+  height:450px;
+
   border-radius: 15px;
 }
 
@@ -176,6 +183,7 @@ img {
 
 .features {
   padding: 1.5rem 0 3rem;
+  color:#000;
 
 }
 
@@ -186,14 +194,15 @@ img {
 
 .features__cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 300px);
   grid-gap:2rem;
+  margin:0 6.5rem;
 }
 
 
 .features__img {
   border-radius: 10px;
-  width: 400px;
+  width: 300px;
   height: 300px;
 
 }
