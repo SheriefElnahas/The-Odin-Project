@@ -111,6 +111,7 @@ img {
   font-weight: bold;
   font-size: 1.3rem;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .header__logo:hover {
@@ -168,10 +169,8 @@ img {
 }
 
 .hero__img {
-
   width:450px;
   height:450px;
-
   border-radius: 15px;
 }
 
