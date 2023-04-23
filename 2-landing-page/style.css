@@ -30,7 +30,7 @@
 
 body {
   font-family: 'Oswald', sans-serif;
-  background: rgb(43, 36, 36);
+  background: var(--dark-color);
   color: #fff;
   line-height: 1.7;
   margin: 0 auto;
@@ -63,10 +63,6 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-.background-dark {
-  background: var(--dark-color);
-  width: 100%;
 }
 
 .background-light-blue {
@@ -230,7 +226,6 @@ img {
 
 /******* || Contact ||  ***********/
 .contact {
-
   background: #7196c9;
   padding-top:2rem;
   padding-bottom:2rem;
@@ -259,3 +254,8 @@ img {
   color:#555;
 }
 
+/******* || Footer ||  ***********/
+.footer {
+  padding:1.5rem 0; 
+  color:#c3c3c3;
+}
