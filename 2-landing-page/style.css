@@ -69,6 +69,10 @@ img {
   width: 100%;
 }
 
+.background-light-blue {
+  background: #7196c9;
+}
+
 .center {
   text-align: center;
 }
@@ -89,6 +93,14 @@ img {
 
 .btn-primary:hover {
   background: hsl(215, 95%, 87%);
+}
+/* Monochromatic Colors #1F2937 #D9E8FD #8DBCFC #6B737D #7196C9 */
+.btn-secondary {
+  background:hsl(215, 28%, 17%);
+  color:#fff;
+}
+.btn-secondary:hover {
+  background:hsl(215, 28%, 27%);
 }
 /******* || HERO SECTION ||  ***********/
 
@@ -159,15 +171,13 @@ img {
   height: 350px;
   border-radius: 15px;
 }
-/* Monochromatic Colors #1F2937 #D9E8FD #8DBCFC #6B737D #7196C9 */
+
 
 
 
 
 /******* || Features ||  ***********/
-.background-light-blue {
-  background: #7196c9;
-}
+
 .features {
   padding: 1.5rem 0 3rem;
 
@@ -217,3 +227,35 @@ img {
   font-style: normal;
   margin-top:1rem;
 }
+
+/******* || Contact ||  ***********/
+.contact {
+
+  background: #7196c9;
+  padding-top:2rem;
+  padding-bottom:2rem;
+}
+
+.contact-container {
+  width:1000px;
+  margin:1rem auto;
+  padding:2rem 2rem;
+  background: #D9E8FD;
+  color:#000;
+  margin-top:3rem;
+  margin-bottom:3rem;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.contact__heading {
+  font-size:1.3rem;
+
+}
+
+.contact__pargraph {
+  color:#555;
+}
+
