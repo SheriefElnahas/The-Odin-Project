@@ -12,7 +12,9 @@
   --p-large-size:18px;
   --logo-text-size:24px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap');
+
 
 
 /******* || RESET ||  ***********/
@@ -29,11 +31,10 @@
 /******* || GENERAL STYLES ||  ***********/
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
   background: rgb(43, 36, 36);
   color: #fff;
   line-height: 1.7;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -48,4 +49,112 @@ img {
   height: auto;
 }
 
+h1,h2,h3,h4 {
+  font-family: 'Lakki Reddy', cursive;
+}
+
+/******* || UTILITY CLASSES ||  ***********/
+.container {
+  max-width: 1200px;
+  margin:0 auto;
+}
+.background-dark {
+  background:var(--dark-color);
+  width:100%;
+}
+
 /******* || HERO SECTION ||  ***********/
+
+/* || Header || */
+.header {
+  display:flex;
+  justify-content: space-between;
+  padding:1rem 0;
+
+
+}
+.header__logo {
+  font-weight: bold;
+  font-size:1.3rem;
+  text-transform: uppercase;
+}
+
+.header__logo:hover {
+  cursor: pointer;
+  color:hsl(215, 90%, 92%);
+}
+
+.header__list {
+  display:flex;
+  list-style: none;
+}
+.header__item {
+  padding:0 1rem;
+  padding-right:1rem;
+}
+.header__item:last-child {
+  padding-right:0;
+  padding-left:1rem;
+}
+
+
+.header__link {
+  color:hsl(215, 90%, 92%);
+  font-weight: bold;
+
+}
+
+.header__link:hover {
+  color:hsl(215, 90%,83%);
+}
+
+/* || HERO || */
+.hero {
+  padding:3rem 0;
+  display:flex;
+
+}
+
+.hero__content {
+  margin-right:5rem;
+}
+
+.hero__heading {
+  font-size:3rem;
+  margin-bottom:0.7rem;
+  margin-top:0;
+
+  margin-top:-1.3rem;
+}
+
+.hero__paragraph {
+  width:90%;
+  font-size:15px;
+}
+
+.hero__img {
+  width:50%;
+  height:350px;
+  border-radius: 15px;
+}
+/* Monochromatic Colors #1F2937 #D9E8FD #8DBCFC #6B737D #7196C9 */
+.btn {
+  padding:0.8rem 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  border:none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+
+  
+}
+
+.btn-primary {
+  background: hsl(215, 95%, 77%);
+  margin-top:1.5rem;
+}
+
+.btn-primary:hover {
+  background: hsl(215, 95%, 87%);
+}
