@@ -169,7 +169,8 @@ img {
   background: #7196c9;
 }
 .features {
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 3rem;
+
 }
 
 .features__heading {
@@ -180,11 +181,10 @@ img {
 .features__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap:2rem;
 }
 
-.features__card {
-  margin: 0 1rem;
-}
+
 .features__img {
   border-radius: 10px;
   width: 400px;
@@ -194,4 +194,26 @@ img {
 .features__paragraph {
   font-size: 14px;
   margin-top: 0.5rem;
+}
+
+
+/******* || ABOUT ||  ***********/
+.about {
+  padding:5rem 0;
+}
+
+.about__quote {
+  font-size:22px;
+  font-style: italic;
+  width:70%;
+  margin:0 auto;
+  line-height:1.4;
+  color:#c8c8c8;
+}
+
+.about__caption, cite {
+  text-align: right;
+  font-weight: bold;
+  font-style: normal;
+  margin-top:1rem;
 }
