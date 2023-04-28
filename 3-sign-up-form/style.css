@@ -1,0 +1,49 @@
+/******* || RESET ||  ***********/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/******* || GENERAL STYLES ||  ***********/
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background: var(--dark-color);
+  color: #fff;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+
+body {
+  padding:0;
+  margin:0;
+  overflow: hidden;
+  background:teal;
+}
+
+
+
+
+main {
+  display:flex;
+}
+
+.left-side__image {
+  max-width:100%;
+  display:block;
+  height:100vh;
+  object-fit: cover;
+}
+
+.left-side {
+  width:40%;
+}
+
+.sign-up {
+  width:60%;
+}
