@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 /******* || RESET ||  ***********/
 *,
 *::after,
@@ -12,38 +13,128 @@
 /******* || GENERAL STYLES ||  ***********/
 
 body {
-  font-family: 'Oswald', sans-serif;
-  background: var(--dark-color);
-  color: #fff;
-  line-height: 1.7;
-  margin: 0 auto;
-}
+  font-family: 'Roboto', sans-serif;
 
-body {
-  padding:0;
-  margin:0;
   overflow: hidden;
-  background:teal;
+  background: #232323;
+  color: #fff;
 }
 
-
-
+input,
+label {
+  font-family: inherit;
+}
 
 main {
-  display:flex;
+  display: flex;
 }
 
 .left-side__image {
-  max-width:100%;
-  display:block;
-  height:100vh;
+  max-width: 100%;
+  display: block;
+  height: 100vh;
   object-fit: cover;
 }
 
 .left-side {
-  width:40%;
+  width: 40%;
 }
 
 .sign-up {
-  width:60%;
+  width: 60%;
+  padding: 4rem 2rem 3rem 4rem;
 }
+
+.sign-up__heading {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  padding-bottom: 3rem;
+}
+
+.sign-up__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.field {
+  margin: 2rem 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.field__label {
+  text-transform: uppercase;
+  display: block;
+  position: absolute;
+  padding-left: 0.5rem;
+  z-index: -1;
+  top: 9px;
+  transition: transform 0.2s ease-out;
+  color: gray;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.field__input {
+  width: 60%;
+  padding: 0.5rem 0.6rem;
+  background: transparent;
+
+  /* border-bottom:3px solid black; */
+  border: 3px solid gray;
+
+  color: #fff;
+}
+
+
+
+/* .field__input:empty{
+  border: 10px solid gray;
+} */
+.error {
+  font-size:0.9rem;
+  margin-top:5px;
+  color:#ff6ea1;
+  visibility: hidden;
+}
+
+input:focus {
+  /* outline: 10px solid #006CE0; */
+  border:none;
+}
+.field__input:valid + .field__label,
+.field__input:focus + .field__label {
+  background: #006CE0;
+  transform: translateX(10px) translateY(-25px);
+  font-size: 0.7rem;
+  z-index: 1;
+  padding: 0.2rem;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border:none;
+}
+
+
+input:focus:invalid {
+  background:rgba(242, 102, 137, 0.6);
+  outline: 2px solid rgb(233, 82, 120);
+  border:2px solid  rgb(233, 82, 120);
+
+
+}
+
+input:valid {
+  outline: 3px solid #006CE0;
+  border:none;
+
+}
+
+.field__input:focus:invalid + .field__label {
+  background:#ec4d85;
+  color:#000;
+
+}
+
