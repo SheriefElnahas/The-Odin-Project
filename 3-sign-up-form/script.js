@@ -1,13 +1,19 @@
 // Email Validation
-const emailInput = document.querySelector('[type="email"]');
-const emailError = document.querySelector('.error--email');
-emailInput.addEventListener('input', (e) => {
-  if (!e.target.value.includes('@')) {
-    emailError.style.visibility = 'visible';
-  } else {
-    emailError.style.visibility = 'hidden';
-  }
-});
+// const emailInput = document.querySelector('[type="email"]');
+// const emailError = document.querySelector('.error--email');
+// emailInput.addEventListener('input', (e) => {
+//   if (!e.target.value.includes('@')) {
+//     emailError.style.visibility = 'visible';
+//   } else {
+//     emailError.style.visibility = 'hidden';
+//   }
+// });
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+})
 
 // Password Validation
 const passwordInput = document.querySelector('[name="password"]');

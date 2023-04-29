@@ -15,7 +15,6 @@
 body {
   font-family: 'Roboto', sans-serif;
 
-  overflow: hidden;
   background: #232323;
   color: #fff;
 }
@@ -30,12 +29,16 @@ main {
 }
 
 /******* || LEFT SIDE ||  ***********/
+.left-side {
+  width: 50%;
+}
 .left-side__image {
   max-width: 100%;
   width: 90%;
   display: block;
   height: 100vh;
   object-fit: cover;
+  position: relative;
 }
 .attribution {
   position: absolute;
@@ -54,15 +57,12 @@ main {
   text-decoration: underline;
   font-weight: bold;
 }
-.left-side {
-  width: 50%;
-}
 
 /******* || Sign UP ||  ***********/
 
 .sign-up {
   width: 50%;
-  padding: 4rem 2rem 3rem 1rem;
+  padding: 4rem 0 3rem 1rem;
 }
 
 .sign-up__heading {
@@ -111,7 +111,7 @@ main {
 }
 
 .error {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin-top: 5px;
   color: #ff6ea1;
   visibility: hidden;
@@ -174,4 +174,68 @@ main {
 .highlight {
   color: #5ba5f4;
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  body {
+    overflow: auto;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+  }
+  .left-side {
+    width: 100%;
+  }
+  .left-side__image {
+    width: 100vw;
+
+
+
+  }
+  .sign-up {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 4rem 0 3rem 1rem;
+    text-align: center;
+  }
+
+  .error {
+    text-align: left;
+  }
+}
+
+@media (max-width: 650px) {
+  .sign-up__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .field {
+    text-align: center;
+
+    width: 300px;
+    margin: 2rem auto;
+  }
+
+  .field__input {
+    width: 300px;
+  }
+  .field__label {
+    top: 10px;
+    left: 2%;
+  }
+  .field:nth-child(1),
+  .field:nth-child(2) {
+    margin-bottom: 1rem;
+  }
+  .error {
+    bottom: -20px;
+    left: 0;
+  }
+
+  .btn {
+    margin: 2rem 0 0;
+  }
 }
