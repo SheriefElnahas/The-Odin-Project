@@ -23,7 +23,7 @@
       <form class="form">
         <div class="sign-up__container">
 
-          <!-- <p class="field">
+          <p class="field">
 
             <input type="text" class="field__input" id="firstname" name="firstname" required>
             <label for="firstname" class="field__label">First Name</label>
@@ -33,17 +33,19 @@
             <input type="text" class="field__input" id="lastname" name="lastname" required>
             <label for="lastname" class="field__label">Last Name</label>
           </p>
+          
           <p class="field">
 
-            <input type="email" class="field__input" id="email" name="email">
-            <label for="email" class="field__label">E-MAIL</label>
-      
+            <input type="email" class="field__input" id="email" name="email" required
+            title="Please include an '@' in the email address" aria-required="true">
+            <label for="email" class="field__label">E-MAIL*</label>
+            <span class="error error--email">Please include an '@' in the email address</span>
           </p>
           <p class="field">
 
-            <input type="tel" class="field__input" id="phone" name="phone" min="5" max="15">
+            <input type="tel" class="field__input" id="phone" name="phone" min="5" max="15"  title="This field is optional">
             <label for="phone" class="field__label">Phone</label>
-          </p> -->
+          </p>
 
           <p class="field">
             <input type="password" class="field__input" id="password" name="password" pattern="[a-zA-Z0-9]{5,}" required
