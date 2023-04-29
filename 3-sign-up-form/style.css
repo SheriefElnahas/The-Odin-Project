@@ -21,7 +21,7 @@ body {
 }
 
 input,
-label {
+button {
   font-family: inherit;
 }
 
@@ -29,20 +29,40 @@ main {
   display: flex;
 }
 
+/******* || LEFT SIDE ||  ***********/
 .left-side__image {
   max-width: 100%;
+  width: 90%;
   display: block;
   height: 100vh;
   object-fit: cover;
 }
-
-.left-side {
-  width: 40%;
+.attribution {
+  position: absolute;
+  z-index: 5;
+  bottom: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: #fff;
+  background: #232323;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
+.highlight--attribution {
+  color: #2990ff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.left-side {
+  width: 50%;
+}
+
+/******* || Sign UP ||  ***********/
+
 .sign-up {
-  width: 60%;
-  padding: 4rem 2rem 3rem 4rem;
+  width: 50%;
+  padding: 4rem 2rem 3rem 1rem;
 }
 
 .sign-up__heading {
@@ -63,6 +83,11 @@ main {
   flex-direction: column;
 }
 
+.field:nth-child(1),
+.field:nth-child(2) {
+  margin-bottom: 3.5rem;
+}
+
 .field__label {
   text-transform: uppercase;
   display: block;
@@ -78,35 +103,26 @@ main {
 }
 
 .field__input {
-  width: 60%;
+  width: 70%;
   padding: 0.5rem 0.6rem;
   background: transparent;
-
-  /* border-bottom:3px solid black; */
   border: 3px solid gray;
-
   color: #fff;
 }
 
-
-
-/* .field__input:empty{
-  border: 10px solid gray;
-} */
 .error {
-  font-size:0.9rem;
-  margin-top:5px;
-  color:#ff6ea1;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #ff6ea1;
   visibility: hidden;
 }
 
-input:focus {
-  /* outline: 10px solid #006CE0; */
-  border:none;
+.field__input:focus {
+  border: none;
 }
 .field__input:valid + .field__label,
 .field__input:focus + .field__label {
-  background: #006CE0;
+  background: #006ce0;
   transform: translateX(10px) translateY(-25px);
   font-size: 0.7rem;
   z-index: 1;
@@ -114,27 +130,48 @@ input:focus {
   color: #fff;
   font-weight: bold;
   letter-spacing: 1px;
-  border:none;
+  border: none;
 }
 
-
-input:focus:invalid {
-  background:rgba(242, 102, 137, 0.6);
-  outline: 2px solid rgb(233, 82, 120);
-  border:2px solid  rgb(233, 82, 120);
-
-
+.field__input:focus:invalid {
+  background: rgba(242, 102, 137, 0.6);
+  outline: 3px solid rgb(333, 82, 120);
+  border: 3px solid rgb(233, 82, 120);
 }
 
-input:valid {
-  outline: 3px solid #006CE0;
-  border:none;
-
+.field__input:valid {
+  outline: 4px solid #006ce0;
+  border: none;
 }
 
 .field__input:focus:invalid + .field__label {
-  background:#ec4d85;
-  color:#000;
-
+  background: #ec4d85;
+  color: #000;
 }
 
+.btn {
+  padding: 0.8rem 4.3rem;
+  font-size: 1rem;
+
+  background: hsl(211, 100%, 44%);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.1s ease-in-out;
+}
+
+.btn:hover {
+  background: hsl(211, 100%, 54%);
+}
+
+.login {
+  display: block;
+  margin-top: 8px;
+  color: #919191;
+}
+.highlight {
+  color: #5ba5f4;
+  cursor: pointer;
+}

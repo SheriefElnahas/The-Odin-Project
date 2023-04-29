@@ -16,7 +16,12 @@
 <body>
   <main>
     <section class="left-side">
-      <img src="sign-up-image.jpg" alt="" class="left-side__image">
+      <img src="sign-up-image.jpg" alt="Illustration for a person pointing at a sign up form that has first name, last name, email and password fields" class="left-side__image" width="700" height="700">
+      <a class="attribution"
+        href="https://www.freepik.com/free-vector/sign-up-concept-illustration_20824341.htm#query=sign%20up&position=1&from_view=keyword&track=robertav1_2_sidr"
+        target="_blank">Image
+        <span class="highlight--attribution">by storyset - on Freepik</span> </a>
+
     </section>
     <section class="sign-up">
       <h1 class="sign-up__heading">Get Started</h1>
@@ -25,50 +30,53 @@
 
           <p class="field">
 
-            <input type="text" class="field__input" id="firstname" name="firstname" required>
-            <label for="firstname" class="field__label">First Name</label>
+            <input type="text" class="field__input" id="firstname" name="firstname" required minlength="3"
+              maxlength="15">
+            <label for="firstname" class="field__label">First Name*</label>
           </p>
           <p class="field">
 
-            <input type="text" class="field__input" id="lastname" name="lastname" required>
-            <label for="lastname" class="field__label">Last Name</label>
+            <input type="text" class="field__input" id="lastname" name="lastname" required minlength="3" maxlength="15">
+            <label for="lastname" class="field__label">Last Name*</label>
           </p>
-          
+
           <p class="field">
 
             <input type="email" class="field__input" id="email" name="email" required
-            title="Please include an '@' in the email address" aria-required="true">
+              title="Please include an '@' in the email address" aria-required="true">
             <label for="email" class="field__label">E-MAIL*</label>
             <span class="error error--email">Please include an '@' in the email address</span>
           </p>
           <p class="field">
 
-            <input type="tel" class="field__input" id="phone" name="phone" min="5" max="15"  title="This field is optional">
+            <input type="tel" class="field__input" id="phone" name="phone" min="5" max="15"
+              title="This field is optional">
             <label for="phone" class="field__label">Phone</label>
           </p>
 
           <p class="field">
             <input type="password" class="field__input" id="password" name="password" pattern="[a-zA-Z0-9]{5,}" required
               title="Must be at least 5 characters" aria-required="true">
-            <label for="password" class="field__label">Password</label>
+            <label for="password" class="field__label">Password*</label>
             <span class="error error--password">Password Must be at least 5 characters</span>
           </p>
           <p class="field">
 
-            <input type="password" class="field__input" id="confirm-password" name="confirm-password" pattern="[a-zA-Z0-9]{5,}" required
-            title="Password does not match" aria-required="true">
-            <label for="confirm-password" class="field__label">Confirm Password</label>
+            <input type="password" class="field__input" id="confirm-password" name="confirm-password"
+              pattern="[a-zA-Z0-9]{5,}" required title="Password does not match" aria-required="true">
+            <label for="confirm-password" class="field__label">Confirm Password*</label>
             <span class="error error--confirm">Password does not match</span>
           </p>
         </div>
-        <button>Submit</button>
+        <button class="btn">Create Account</button>
+        <span class="login">Already have an account? <span class="highlight">Login</span></span>
       </form>
 
 
     </section>
   </main>
 
-  <!-- <a href="https://www.freepik.com/free-vector/sign-up-concept-illustration_20824341.htm#query=sign%20up&position=1&from_view=keyword&track=robertav1_2_sidr">Image by storyset</a> on Freepik -->
+
 
 </body>
 
