@@ -1,42 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Odin Project CSS Project 4 : Admin Dashboard" />
+
   <title>The Odin Project - Admin Dashboard</title>
+
+  <script src="https://kit.fontawesome.com/75016b0d3c.js" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="header">
     <h2 class="header__heading">Overview</h2>
     <div class="header__content">
-      <img src="" alt="" class="header__img--search">
-      <img src="" alt="" class="header__img--notification">
+      <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+      <i class="fa-sharp fa-solid fa-bell"></i>
+      <!-- <img src="" alt="" class="header__img--search">
+      <img src="" alt="" class="header__img--notification"> -->
 
       <p class="header__name">Sherief Elnahas</p>
       <img src="" alt="" class="header__img--profile">
     </div>
   </header>
-  
+
+  <!-- Attribute : <a href="https://iconscout.com/icons/dashboard" target="_blank">Free Dashboard Icon</a> by <a href="https://iconscout.com/contributors/google-inc">Google Inc.</a> on <a href="https://iconscout.com">IconScout</a> -->
   <nav class="nav">
-    <img src="" alt="" class="nav__logo">
-    <h1 class="nav__logo">Dashboard</h1>
+    <div class="nav__logo">
+      <!-- <img src="view-dashboard.svg" alt="" > -->
+      <svg role="img" class="nav__logo--img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" />
+      </svg>
+      <h1 class="nav__logo--heading">Dashboard</h1>
+    </div>
+
 
     <ul class="nav__list--primary">
-      <li class="nav__item"><a href="#" class="nav__link"> <i class="nav__icon"></i>Overview</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"> <i class="nav__icon"></i>Tickets</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"> <i class="nav__icon"></i>Ideas</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"> <i class="nav__icon"></i>Contacts</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"> <i class="nav__icon"></i>Agents</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"> <i class="nav__icon"></i>Articles</a></li>
+      <li class="nav__item"><a href="#" class="nav__link"> <i class="fa-sharp fa-solid fa-chart-pie"></i> Overview</a>
+      </li>
+      <li class="nav__item"><a href="#" class="nav__link"> <i class="fa-sharp fa-solid fa-ticket"></i> Tickets</a></li>
+      <li class="nav__item"><a href="#" class="nav__link"> <i class="fa-sharp fa-solid fa-lightbulb"></i> Ideas</a></li>
+      <li class="nav__item"><a href="#" class="nav__link"> <i class="fa-sharp fa-solid fa-user-group"></i> Contacts</a>
+      </li>
+      <li class="nav__item"><a href="#" class="nav__link"> <i class="fa-sharp fa-solid fa-user-secret"></i> Agents</a>
+      </li>
+
+
+      <li class="nav__item"><a href="#" class="nav__link"> <i class="fa-sharp fa-solid fa-newspaper"></i> Article</a>
+      </li>
+
     </ul>
 
     <ul class="nav__list--secondary">
-      <li class="nav__item"><a href="#" class="nav__link"> <i class="nav__icon"></i>Setting</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"> <i class="nav__icon"></i>Subscription</a></li>
+      <li class="nav__item"><a href="#" class="nav__link"> <i class="fa-sharp fa-solid fa-gear"></i> </i>Setting</a>
+      </li>
+      <li class="nav__item"><a href="#" class="nav__link"> <i class="fa-sharp fa-solid fa-medal"></i> Subscription</a>
+      </li>
+
+
     </ul>
   </nav>
+
+
 
   <section class="info">
     <div class="info__card">
@@ -57,4 +87,5 @@
     </div>
   </section>
 </body>
+
 </html>
