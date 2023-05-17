@@ -19,6 +19,12 @@ body {
   grid-template-columns: clamp(220px, 25%, 280px) 100fr;
 }
 
+@media (max-width: 750px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+}
+
 /******* || GENERAL STYLES ||  *********/
 a {
   text-decoration: none;
@@ -44,12 +50,22 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+.header__menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .header__menu {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
 
 .header__content {
   display: flex;
   align-items: center;
 }
-
 
 .header__content--icons {
   border-right: 2px solid rgb(177 177 177);
@@ -57,7 +73,7 @@ main {
 
 @media (max-width: 550px) {
   .header__content--icons {
-    display:none;
+    display: none;
   }
 }
 
@@ -75,11 +91,12 @@ main {
 
 .header__profile--name {
   margin: 0 2rem;
-  font-size:0.8rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 .header__profile--img {
   width: 60px;
+  height:50px;
   border-radius: 50%;
 }
 
@@ -107,9 +124,8 @@ main {
   text-align: center;
 }
 
-
 .info__card--title {
-  color: rgb(159, 162, 180);
+  color: #70758F;
   font-weight: 500;
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
@@ -137,18 +153,37 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav__close {
+  position: absolute;
+  color: rgb(212, 212, 212);
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 
 @media (max-width: 750px) {
-  body {
-    grid-template-columns: 0px 1fr;
+  .nav {
+    transform: translateX(-300px);
+    z-index: 100;
+    background: #363740;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
   }
-  .nav  {
-    transform: translateX(-250px);
-
+  .nav__close {
+    display: block;
   }
+}
 
+.nav__close:hover {
+  color: rgb(228, 57, 57);
+  transform: scale(1.1);
 }
 
 .nav__logo {
@@ -165,7 +200,7 @@ nav {
 
 .nav__logo--heading {
   font-weight: 900;
-  font-size: clamp(1.5rem, 2vw, 4rem); 
+  font-size: clamp(1.5rem, 2vw, 4rem);
   color: #fff;
 }
 
@@ -196,6 +231,10 @@ nav {
   margin-right: 30px;
 }
 
-/* .nav__list--secondary {
-  margin-top: 12rem;
-} */
+/* Navigation Toggle Clasess */
+.move__right {
+  transform: translateX(0px);
+}
+nav .move__left {
+  transform: translateX(-300px);
+}
