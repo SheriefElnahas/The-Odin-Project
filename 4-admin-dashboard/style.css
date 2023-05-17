@@ -8,10 +8,15 @@
 }
 
 body {
-  background: #f1eeee;
+  background: #f3f3f3;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   color: #333;
+}
+
+body {
+  display: grid;
+  grid-template-columns: clamp(220px, 25%, 280px) 100fr;
 }
 
 /******* || GENERAL STYLES ||  *********/
@@ -29,25 +34,121 @@ img {
   height: auto;
 }
 
-/******* || NAV ||  *********/
-
-main,
-header {
-  width: 80%;
-  background: orange;
-  margin-left: 20%;
+main {
+  padding: 1.5rem 1.8rem 1rem;
 }
 
+/******* || HEADER ||  *********/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+}
+
+
+.header__content--icons {
+  border-right: 2px solid rgb(177 177 177);
+}
+
+@media (max-width: 550px) {
+  .header__content--icons {
+    display:none;
+  }
+}
+
+.header__content .fa-sharp {
+  color: orange;
+  margin-right: 1.5rem;
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+
+.header__profile {
+  display: flex;
+  align-items: center;
+}
+
+.header__profile--name {
+  margin: 0 2rem;
+  font-size:0.8rem;
+  font-weight: bold;
+}
+.header__profile--img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+/******* || SECTION INFO ||  *********/
+.info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1050px) {
+  .info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.info__card {
+  background: #fff;
+  display: grid;
+  place-content: center;
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  border: 3px solid rgb(228, 227, 227);
+  text-align: center;
+}
+
+
+.info__card--title {
+  color: rgb(159, 162, 180);
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.info__card--number {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.info__card:hover {
+  border: 3px solid #5c5cff;
+}
+.info__card:hover .info__card--title,
+.info__card:hover .info__card--number {
+  color: #5c5cff;
+}
+/******* || NAV ||  *********/
+
 nav {
-  width: 20%;
   background: #363740;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  height: 100%;
-  display:flex;
+  height: 100vh;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform .2s ease-in-out;
+}
+
+@media (max-width: 750px) {
+  body {
+    grid-template-columns: 0px 1fr;
+  }
+  .nav  {
+    transform: translateX(-250px);
+
+  }
+
 }
 
 .nav__logo {
@@ -64,7 +165,7 @@ nav {
 
 .nav__logo--heading {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 4rem); 
   color: #fff;
 }
 
@@ -89,7 +190,7 @@ nav {
   color: currentColor;
 }
 
-.fa-sharp {
+.nav__item .fa-sharp {
   width: 20px;
   height: 20px;
   margin-right: 30px;
