@@ -96,7 +96,7 @@ main {
 }
 .header__profile--img {
   width: 60px;
-  height:50px;
+  height: 50px;
   border-radius: 50%;
 }
 
@@ -120,12 +120,12 @@ main {
   place-content: center;
   padding: 1.5rem 0;
   border-radius: 10px;
-  border: 3px solid rgb(228, 227, 227);
+  border: 3px solid #e4e3e3;
   text-align: center;
 }
 
 .info__card--title {
-  color: #70758F;
+  color: #70758f;
   font-weight: 500;
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
@@ -168,13 +168,16 @@ nav {
 
 @media (max-width: 750px) {
   .nav {
+    position: fixed;
     transform: translateX(-300px);
     z-index: 100;
     background: #363740;
-    position: absolute;
+
     top: 0;
     left: 0;
+
     width: 280px;
+
   }
   .nav__close {
     display: block;
@@ -237,4 +240,94 @@ nav {
 }
 nav .move__left {
   transform: translateX(-300px);
+}
+
+/******* || SECTION TRENDS ||  *********/
+.trends {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+
+  margin-top: 1.5rem;
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .trends {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
+  .trends__table {
+    border-left: 3px solid #e4e3e3;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .trends__graph--img {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.trends__graph {
+  position: relative;
+}
+
+.trends__graph--img {
+  position: relative;
+  background: #fff;
+  border-top: 3px solid #e4e3e3;
+  border-bottom: 3px solid #e4e3e3;
+  border-left: 3px solid #e4e3e3;
+  border-right: 3px solid #e4e3e3;
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trends__graph--caption {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.trends__table {
+  background: #fff;
+  border-top: 3px solid #e4e3e3;
+  border-bottom: 3px solid #e4e3e3;
+  border-right: 3px solid #e4e3e3;
+  text-align: center;
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.table__column {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.table__column:not(.table__column:last-of-type) {
+  border-bottom: 2px solid #e4e3e3;
+}
+
+.table__column--heading {
+  color: #70758f;
+  font-weight: bold;
+  font-size:0.9rem;
+}
+
+.table__column--description {
+  font-size: 1.7rem;
+  font-weight: 600;
 }
