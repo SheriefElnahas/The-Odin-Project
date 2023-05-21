@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Odin Project CSS Project 4 : Admin Dashboard" >
+  <meta name="description" content="The Odin Project CSS Project 4 : Admin Dashboard">
 
   <title>The Odin Project - Admin Dashboard</title>
 
@@ -19,7 +19,7 @@
 <body>
 
   <nav class="nav">
-    <i class="fa-solid fa-x nav__close" ></i>
+    <i class="fa-solid fa-x nav__close"></i>
     <div class="nav__logo">
 
       <svg role="img" class="nav__logo--img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -58,7 +58,7 @@
 
   <main>
     <header class="header">
-      <h2 class="header__heading"> <i class="fa-sharp fa-solid fa-bars header__menu" ></i> Overview</h2>
+      <h2 class="header__heading"> <i class="fa-sharp fa-solid fa-bars header__menu"></i> Overview</h2>
       <div class="header__content">
         <div class="header__content--icons">
           <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
@@ -68,34 +68,35 @@
 
         <div class="header__profile">
           <p class="header__profile--name">Sherief Elnahas</p>
-          <img width="60" height="50" src="hataki-kakasi-profile-picture.png" class="header__profile--img" alt="Hataka Kakashi's Profile Picture ( Fictional Character from the anime Naruto )">
+          <img width="60" height="50" src="hataki-kakasi-profile-picture.png" class="header__profile--img"
+            alt="Hataka Kakashi's Profile Picture ( Fictional Character from the anime Naruto )">
         </div>
       </div>
 
     </header>
     <section class="info">
-      <div class="info__card">
-        <p class="info__card--title">Open</p>
-        <h2 class="info__card--number">21</h2>
+      <div class="info__box">
+        <p class="info__box--title">Open</p>
+        <h2 class="info__box--number">21</h2>
       </div>
-      <div class="info__card">
-        <p class="info__card--title">Unresolved</p>
-        <h2 class="info__card--number">43</h2>
+      <div class="info__box">
+        <p class="info__box--title">Unresolved</p>
+        <h2 class="info__box--number">43</h2>
       </div>
-      <div class="info__card">
-        <p class="info__card--title">On hold</p>
-        <h2 class="info__card--number">35</h2>
+      <div class="info__box">
+        <p class="info__box--title">On hold</p>
+        <h2 class="info__box--number">35</h2>
       </div>
-      <div class="info__card">
-        <p class="info__card--title">Overdue</p>
-        <h2 class="info__card--number">16</h2>
+      <div class="info__box">
+        <p class="info__box--title">Overdue</p>
+        <h2 class="info__box--number">16</h2>
       </div>
     </section>
 
     <section class="trends">
       <figure class="trends__graph">
         <figcaption class="trends__graph--caption">Today's Trends</figcaption>
-        <img src="svg-chart.svg"  class="trends__graph--img" role="img">
+        <img src="svg-chart.svg" class="trends__graph--img" role="img">
 
       </figure>
       <div class="trends__table">
@@ -104,7 +105,7 @@
           <p class="table__column--description">449</p>
         </div>
         <div class="table__column">
-          <h3 class="table__column--heading">Received          </h3>
+          <h3 class="table__column--heading">Received </h3>
           <p class="table__column--description">426
 
           </p>
@@ -118,6 +119,90 @@
           <p class="table__column--description">94%</p>
         </div>
       </div>
+    </section>
+
+    <section class="data">
+      <div class="data-card">
+        <div class="card-header">
+          <div class="card-header__content">
+            <h3 class="card-header__content--heading">Unresolved Tickets</h3>
+            <p class="card-header__content--paragraph">Support</p>
+          </div>
+          <a href="#" class="card-header__link">View Details</a>
+        </div>
+
+        <div class="data-card__columns">
+          <div class="data-card__column">
+            <p class="data-card__column--value">Waiting on Feature Request</p>
+            <p class="data-card__column--number">4238</p>
+          </div>
+          <div class="data-card__column">
+            <p class="data-card__column--value">Awaiting Customer Response</p>
+            <p class="data-card__column--number">1005</p>
+          </div>
+          <div class="data-card__column">
+            <p class="data-card__column--value">Awaiting Developer Fix</p>
+            <p class="data-card__column--number">905</p>
+          </div>
+          <div class="data-card__column">
+            <p class="data-card__column--value">Pending</p>
+            <p class="data-card__column--number">281</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="card-header">
+          <div class="card-header__content">
+            <h3 class="card-header__content--heading">Tasks </h3>
+            <p class="card-header__content--paragraph">Today </p>
+          </div>
+          <a href="#" class="card-header__link">View All</a>
+        </div>
+
+        <div class="data-card__columns">
+          <div class="data-card__field">
+            <label class="data-card__field--label" for="finish"> Finish ticket update
+              <input type="checkbox" checked="checked" id="finish" value="finish" name="task">
+              <span class="data-card__field--checkmark"></span>
+            </label>
+            <small class="data-card__field--alert alert--urgent">Urgent</small>
+          </div>
+
+          <div class="data-card__field">
+            <label class="data-card__field--label" for="create"> Create new ticket example
+              <input type="checkbox" checked="checked" id="create" value="create" name="task">
+              <span class="data-card__field--checkmark"></span>
+            </label>
+            <small class="data-card__field--alert alert--new">New</small>
+
+
+          </div>
+
+          <div class="data-card__field">
+            <label class="data-card__field--label" for="update">Update ticket report
+              <input type="checkbox" checked="checked" id="update" value="update" name="task">
+              <span class="data-card__field--checkmark"></span>
+            </label>
+            <small class="data-card__field--alert alert--default">Default</small>
+
+
+          </div>
+
+          <div class="data-card__field">
+            <label class="data-card__field--label" for="close">Close ticket report
+              <input type="checkbox" checked="checked" id="close" value="close" name="task">
+              <span class="data-card__field--checkmark"></span>
+            </label>
+            <small class="data-card__field--alert alert--assigned">Assigned</small>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
     </section>
   </main>
 

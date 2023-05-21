@@ -114,7 +114,7 @@ main {
   }
 }
 
-.info__card {
+.info__box {
   background: #fff;
   display: grid;
   place-content: center;
@@ -124,22 +124,22 @@ main {
   text-align: center;
 }
 
-.info__card--title {
+.info__box--title {
   color: #70758f;
   font-weight: 500;
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
 }
 
-.info__card--number {
+.info__box--number {
   font-size: 2.5rem;
   font-weight: 700;
 }
-.info__card:hover {
+.info__box:hover {
   border: 3px solid #5c5cff;
 }
-.info__card:hover .info__card--title,
-.info__card:hover .info__card--number {
+.info__box:hover .info__box--title,
+.info__box:hover .info__box--number {
   color: #5c5cff;
 }
 /******* || NAV ||  *********/
@@ -330,4 +330,179 @@ nav .move__left {
 .table__column--description {
   font-size: 1.7rem;
   font-weight: 600;
+}
+
+
+/******* || CARD ||  *********/
+.data{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:2rem;
+  margin-top: 2rem;
+  padding-bottom:1rem;
+}
+
+@media (max-width: 1050px) {
+  .data {
+    grid-template-columns: 1fr;
+  }
+}
+
+.data-card {
+  background: #fff;
+  border: 3px solid #e4e3e3;
+  border-radius: 10px;
+}
+
+.card-header {
+  display:flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding:1.5rem 1.5rem;
+  
+}
+.card-header__content {
+  display:flex;
+  flex-direction: column;
+
+}
+.card-header__content--paragraph {
+  font-size:0.8rem;
+  font-weight: 500;
+  color:#70758f;
+  margin-top:3px;
+}
+.card-header__link {
+  margin-top:3px;
+  font-size:0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: underline;
+}
+.card-header__link:hover {
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+
+.data-card__column, .data-card__field {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1rem 1.5rem;
+
+  color:#333;
+  font-size:0.9rem;
+  letter-spacing: 0.3px;
+}
+
+.data-card__column {
+  padding:1.2rem 1.5rem;
+}
+
+.data-card__column--number {
+  font-weight: bold;
+  color:#70758f;
+}
+
+.data-card__column:not(.data-card__column:last-of-type), 
+.data-card__field:not(.data-card__field:last-of-type) {
+  border-bottom: 2px solid #e4e3e3;
+}
+
+.data-card__field--alert {
+  text-transform: uppercase;
+  padding:0.3rem 0.8rem;
+  font-weight: 700;
+  font-size:0.7rem;
+  border-radius: 10px;
+}
+.alert--urgent {
+  color:#fff;
+  background: orange;
+}
+.alert--new {
+  color:#fff;
+  background: #68bc68;
+}
+.alert--default {
+  color:gray;
+  background: #f0f1f7;
+}
+.alert--assigned {
+  background: blue;
+  color:#fff;
+}
+/*  */
+/* Customize the label (the container) */
+.data-card__field--label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.data-card__field--label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.data-card__field--checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+  border-radius: 50%;
+  border:3px solid #e4e3e3;
+}
+
+/* On mouse-over, add a grey background color */
+.data-card__field--label:hover input ~ .data-card__field--checkmark {
+  background-color: #ccc;
+
+}
+
+/* When the checkbox is checked, add a blue background */
+.data-card__field--label input:checked ~ .data-card__field--checkmark {
+  background-color: #2196F3;
+
+  border:3px solid transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.data-card__field--checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.data-card__field--label input:checked ~ .data-card__field--checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.data-card__field--label .data-card__field--checkmark:after {
+  left: 5px;
+  top: 1.5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
