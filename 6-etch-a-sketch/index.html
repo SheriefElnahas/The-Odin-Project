@@ -2,29 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="Create your own unique designs with etch a sketch in JavaScript. Use the canvas to draw and paint on the screen, and add text, images, and other design elements to make your masterpiece." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Etch-A-Sketch</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="heading">Etch-a-sketch</h1>
-    <section>
-      <div class="sketch-container">
-        <div class="sketch"></div>
-      </div>
+    <main>
+      <section>
+        <div class="sketch-container">
+          <h1 class="heading">Etch-a-sketch</h1>
+          <div class="sketch"></div>
+        </div>
 
-      <div class="buttons-container">
-        <input type="color" />
-        <button class="btn active">Choose Color</button>
-        <button class="btn">Random Color</button>
-        <button class="btn">Eraser</button>
-        <button class="btn">Clear</button>
-        <button class="btn border">Remove Border</button>
-        <label class="range" for="range"></label>
-        <input type="range" id="range" min="1" max="50" />
-      </div>
-    </section>
+        <div class="buttons-container">
+          <label class="sr-only" for="color-input">Choose a color:</label>
+          <input type="color" id="color-input" />
+          <button class="btn active">Color Mode</button>
+          <button class="btn">Random Color</button>
+          <button class="btn">Eraser</button>
+          <button class="btn">Clear</button>
+          <button class="btn border">Remove Border</button>
+          <label class="range" for="size-range">26 x 26</label>
+          <input type="range" id="size-range" min="1" max="50" />
+        </div>
+      </section>
+    </main>
 
     <script src="app.js"></script>
   </body>

@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/******************************************
+// ###           General Setup         ####
+*******************************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
   padding: 0;
@@ -6,19 +9,26 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
 body {
-  background-color: #f1f3f8;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ededed;
+  color: #333333;
 }
 
-button {
+button,
+input {
   font-family: inherit;
 }
-button , input {
-    cursor: pointer;
-    border: none;
-    transition: transform 0.2s linear;
-    margin-bottom:1.5rem;
+
+button,
+input {
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 1.5rem;
 }
 
 section {
@@ -26,14 +36,28 @@ section {
   flex-direction: column;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/******************************************
+// ###               Main                ####
+*******************************************/
 .heading {
   text-align: center;
   margin-top: 2rem;
-  font-size: 2.8rem;
+  font-size: clamp(5rem, 2rem + 3vw, 8rem);
   letter-spacing: 1px;
   font-weight: bold;
 }
-
 
 .sketch {
   width: 300px;
@@ -49,18 +73,21 @@ section {
   justify-content: center;
   align-items: center;
 }
-
-input[type="color"] {
+.range {
+  font-size: 1.5rem;
+}
+input[type='color'] {
   width: 80px;
   height: 80px;
   border: none;
+  font-size: 3rem;
 }
 
-input[type="color"]::-webkit-color-swatch-wrapper {
+input[type='color']::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 
-input[type="color"]::-webkit-color-swatch {
+input[type='color']::-webkit-color-swatch {
   border: none;
   border-radius: 50px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -73,61 +100,54 @@ input[type="color"]::-webkit-color-swatch {
   height: 40px;
   border-radius: 3px;
   transition: transform 0.2s linear;
+  font-size: 1.6rem;
 }
 
-.btn:hover , input[type="color"]:hover {
+.btn:hover,
+input[type='color']:hover {
   transform: scale(1.05);
 }
 
 .active {
-    background:#333;
-    color:#fff;
+  background: #333;
+  color: #fff;
 }
 
+@media (min-width: 650px) {
+  section {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3rem;
+  }
 
-@media(min-width: 650px) {
-    section {
-        flex-direction: row;
-        justify-content: space-around;
-        margin:0 5rem;
-    }
-    .heading {
-        margin-right:13rem;
-    }
-    .sketch {
-        width: 400px;
-        height: 400px;
-        margin: 2.5rem auto;
-        margin-right:2rem;
-      }
-      .btn {
-        width: 180px;
-        height: 40px;
-      }
+  .sketch {
+    width: 400px;
+    height: 400px;
+    margin: 2.5rem auto;
+    margin-right: 2rem;
+  }
+  .btn {
+    width: 180px;
+    height: 40px;
+    margin-bottom: 2rem;
+  }
 }
 
-@media(min-width: 900px) {
-    .heading {
-        margin-right:28rem;
-        font-size:3rem;
-    }
-    .sketch {
-        width: 600px;
-        height: 400px;
-        margin: 2.5rem auto;
-        margin-right:2rem;
-      }
+@media (min-width: 900px) {
+  .sketch {
+    width: 600px;
+    height: 400px;
+  }
 }
 .sketch {
-    display:flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .sketch div {
-
-    /* background:orange; */
-    border:1px solid black
+  /* background:orange; */
+  border: 1px solid black;
 }
 
 label {
-    margin-bottom:0.5rem; 
+  margin-bottom: 0.5rem;
 }
