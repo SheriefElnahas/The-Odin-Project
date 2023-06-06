@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap');
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Hind Madurai', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+
+}
+:root {
+    --primary-color: #fac650;
+}
+header {
+    background:rgb(43, 30, 30);
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    height:100px;
+}
+
+header h1 {
+    padding-top:1rem;
+    color:var(--primary-color);
+    font-family: 'Jockey One', sans-serif;
+    letter-spacing: 6px;
+    font-size:3rem;
+}
+
+section {
+    background:rgb(92, 69, 69);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    font-weight: bold;
+}
+
+
+.result {
+    margin-top:2rem;
+    font-size:2.5rem;
+}
+.details {
+    font-size:1.2rem;
+}
+
+.score-container {
+    display:flex;
+}
+.score-container div {
+    margin:2rem 4rem 0 2rem;
+
+}
+.player-choice, .computer-choice {
+    font-size:5rem;
+    text-align: center;
+}
+
+.score {
+    font-size:2rem;
+}
+
+.buttons {
+    margin:3rem 0;
+  
+}
+
+.btn {
+    width:190px;
+    height:150px;
+    font-size:6rem;
+    margin-right:1rem;
+    background:rgb(39, 30, 30);
+    transition: background 0.3s linear;
+    border:none;
+    border-radius:10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background:rgb(77, 60, 60);
+}
+
+.modal {
+    position:absolute;
+    background:rgb(68, 46, 46);
+    width:240px;
+    height:190px;
+    padding:2.8rem;
+    top:35%;
+    left:41%;
+    z-index:100;
+    border-radius:10px;
+    text-align: center;
+
+
+}
+.modal-text {
+    color:rgb(238, 230, 230);
+    font-weight: bold;
+    margin-bottom:1rem;
+    font-size:1.8rem;
+}
+.modal-button   {
+    padding:0.5rem 1rem;
+    color:rgb(238, 230, 230);
+    background:rgb(92, 69, 69);
+    font-family: inherit;
+    font-weight: normal;
+    font-size:1.4rem;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal-button:hover {
+    background:rgb(117, 88, 88);
+}
+
+.overlay {
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:10;
+}
+
+.hide {
+    display:none;
+}
+@media (max-width: 620px) {
+    header h1 {
+        font-size:2.5rem;
+    }
+    section {
+        min-height: 100vh;
+        padding-bottom:2rem;
+    }
+    .score {
+        font-size:1.5rem;
+    }
+
+    .btn {
+        width:120px;
+        height:110px;
+        font-size:4rem;
+    }
+
+  
+}
+
