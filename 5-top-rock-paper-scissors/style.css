@@ -143,8 +143,8 @@ dialog::backdrop {
 }
 @media (max-width: 620px) {
   body {
-    height:100vh;
-    background:#222831;
+    height: 100vh;
+    background: #222831;
   }
   .header__heading {
     font-size: 1.8rem;

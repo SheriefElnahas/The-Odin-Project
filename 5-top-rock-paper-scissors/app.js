@@ -48,6 +48,10 @@ function computerPlay() {
     return choices[randomNum()];
 }
 
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
 // Function To Change From String To Emoji
 function changeToEmoji(choice) {
     if (choice === 'paper') {
@@ -61,6 +65,7 @@ function changeToEmoji(choice) {
 }
 
 
+
 function checkWinner(playerSelection, computerSelection) {
     if (playerSelection === 'rock' && computerSelection === 'scissors' ||
         playerSelection === 'scissors' && computerSelection === 'paper' ||
@@ -68,7 +73,7 @@ function checkWinner(playerSelection, computerSelection) {
 
         // Player Wins
         playerScore++;
-        return `You Won! ${playerSelection} beats ${computerSelection}`
+        return `You Won! ${capitalizeFirstLetter(playerSelection)} beats ${capitalizeFirstLetter(computerSelection)}`
     } else if
         (computerSelection === 'rock' && playerSelection === 'scissors' ||
         computerSelection === 'scissors' && playerSelection === 'paper' ||
@@ -76,11 +81,11 @@ function checkWinner(playerSelection, computerSelection) {
 
         // Computer Wins
         computerScore++;
-        return `You Lost! ${playerSelection} beats ${computerSelection}`
+        return `You Lost! ${capitalizeFirstLetter(playerSelection)} beats ${capitalizeFirstLetter(computerSelection)}`
     } else {
 
         // Draw
-        return `It's a tie! ${playerSelection} ties with ${computerSelection}`
+        return `It's a tie! ${capitalizeFirstLetter(playerSelection)} ties with ${capitalizeFirstLetter(computerSelection)}`
     }
 }
 
