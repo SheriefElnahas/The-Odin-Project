@@ -96,7 +96,7 @@ body {
 }
 
 .btn:hover {
-    background: hsl(217, 44%, 39%);
+  background: hsl(217, 44%, 39%);
 }
 
 .modal {
@@ -111,7 +111,6 @@ body {
   text-align: center;
   border: none;
   overflow: hidden;
-  
 }
 .modal__text {
   color: rgb(238, 230, 230);
@@ -135,15 +134,6 @@ body {
   background: hsl(217, 44%, 39%);
 }
 
-/* .overlay {
-    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    position: absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    z-index:10;
-} */
 dialog::backdrop {
   background: rgba(27, 27, 27, 0.5);
 }
@@ -152,20 +142,40 @@ dialog::backdrop {
   display: none;
 }
 @media (max-width: 620px) {
-  header h1 {
-    font-size: 2.5rem;
+  body {
+    height:100vh;
+    background:#222831;
   }
-  section {
-    min-height: 100vh;
-    padding-bottom: 2rem;
+  .header__heading {
+    font-size: 1.8rem;
   }
+
+  .game__results {
+    font-size: 2.2rem;
+  }
+  .game__details {
+    font-size: 1.8rem;
+  }
+  .player__choice,
+  .computer__choice {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    height: 68px;
+    width: 66px;
+  }
+
   .score {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .buttons {
+    margin-top: 1rem;
   }
 
   .btn {
     width: 120px;
     height: 110px;
     font-size: 4rem;
+    margin: 0 1rem 0 0;
   }
 }
