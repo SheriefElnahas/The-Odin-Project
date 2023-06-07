@@ -3,7 +3,7 @@ Create your own unique designs with etch a sketch in JavaScript. Use the canvas 
 
 
 ## Screenshot Of The Project
-(![top-etch-a-sketch-screenshot](https://github.com/SheriefElnahas/The-Odin-Project/assets/47671429/c81f6053-6662-4c49-9bc7-2c2700314852))
+[TOP : Etch a Sketch](https://github.com/SheriefElnahas/The-Odin-Project/assets/47671429/c81f6053-6662-4c49-9bc7-2c2700314852))
 
 
 
