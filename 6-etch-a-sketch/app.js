@@ -1,8 +1,6 @@
-
 /*------------------- DOM Selection -----------------*/
 // The container that is holding all the Boxes
 const sketchContainer = document.querySelector('.sketch');
-
 
 // Range Input & Label
 const rangeElement = document.querySelector('input[type="range"]');
@@ -14,9 +12,6 @@ const buttons = document.querySelectorAll('.btn');
 // Color Picker Element & Global Color Value To Hold Current Color
 const colorPickerElement = document.querySelector('input[type="color"]');
 let color = '#000000';
-
-
-
 
 /*------------------- Helper Functions -----------------*/
 function removeActiveClass() {
@@ -40,24 +35,22 @@ function removeBorder(boxes) {
 let currentWindowWidth;
 let currentWindowHeight;
 
-
 // Adjust Sketch Height And Width Based On The Media Query
 function changeSketchDimensionBasedOnScreenSize() {
   if (window.innerWidth >= 900) {
     currentWindowWidth = 600;
     currentWindowHeight = 400;
     createBoxes(rangeElement.value);
-  } else if (window.innerWidth <= 900 & window.innerWidth > 650) {
+  } else if ((window.innerWidth <= 900) & (window.innerWidth > 650)) {
     currentWindowWidth = 400;
     currentWindowHeight = 400;
     createBoxes(rangeElement.value);
-    console.log('medium');
+
   } else if (window.innerWidth < 650) {
     currentWindowWidth = 300;
     currentWindowHeight = 300;
     createBoxes(rangeElement.value);
   }
-
 }
 
 function createBoxes(boxes) {
@@ -77,7 +70,6 @@ function createBoxes(boxes) {
   }
 }
 
-
 const randomNumber = () => Math.floor(Math.random() * 256);
 
 const randomColor = () => {
@@ -87,29 +79,18 @@ const randomColor = () => {
   return `rgb(${red},${green},${blue})`;
 };
 
-
-
-
-
-
 /*------------------- Initialize The Project -----------------*/
 // This Is Not Efficient Fix It Later !
 window.addEventListener('resize', function () {
-  changeSketchDimensionBasedOnScreenSize()
+  changeSketchDimensionBasedOnScreenSize();
 });
 function init() {
   rangeLabel.textContent = `${rangeElement.value} X ${rangeElement.value}`;
   createBoxes(rangeElement.value);
-  changeSketchDimensionBasedOnScreenSize()
+  changeSketchDimensionBasedOnScreenSize();
 }
 
 init();
-
-
-
-
-
-
 
 /*------------------- DOM Events -----------------*/
 
@@ -139,11 +120,9 @@ buttons.forEach((button) => {
     // Change Mode Logic
     if (currentButton.textContent === 'Choose Color') {
       mode = 'normal';
-
     }
     if (currentButton.textContent === 'Random Color') {
       mode = 'random';
-
     }
     if (currentButton.textContent === 'Eraser') {
       mode = 'eraser';
@@ -155,17 +134,16 @@ buttons.forEach((button) => {
 
     if (currentButton.textContent === 'Remove Border') {
       currentButton.classList.remove('active');
-      removeBorder(sketchContainer.children)
+      removeBorder(sketchContainer.children);
     }
   });
 });
-
-
-
+let boxes;
 sketchContainer.addEventListener('mouseenter', function (e) {
+
   // Extract The boxes & Convert Them Into An Array
-  let boxes = e.target.children;
-  boxes = Array.from(boxes);
+  boxes = Array.from(e.target.children);
+
 
   boxes.forEach((box) => {
     box.addEventListener('mouseenter', function () {
@@ -174,12 +152,8 @@ sketchContainer.addEventListener('mouseenter', function (e) {
       } else if (mode === 'random') {
         box.style.backgroundColor = randomColor();
       } else if (mode === 'eraser') {
-        box.style.backgroundColor = '#ffffff'
+        box.style.backgroundColor = '#ffffff';
       }
     });
   });
 });
-
-
-
-
