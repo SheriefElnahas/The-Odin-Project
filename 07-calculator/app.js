@@ -1,48 +1,51 @@
 const screenLastElement = document.querySelector('.screen__last');
 const screenResultElement = document.querySelector('.screen__result');
-
 const calculatorButtons = document.querySelector('.calculator__buttons');
+
+
 
 calculatorButtons.addEventListener('click', handleButtonClick);
 
 
-function isNumberOrDecimalPoint(value) {
-  return !isNaN(value) || value === '.';
+function isNumber(value) {
+  return !isNaN(value);
 }
+
 
 function handleButtonClick(e) {
   if (e.target.tagName === 'BUTTON') {
     const buttonValue = e.target.textContent;
 
-    // If buttonValue is a number or decimal point then call handleButtonClick function
-    if (isNumberOrDecimalPoint(buttonValue)) {
+    if (buttonValue === '.') {
+      handleDecimalPointClick(buttonValue);
+    }
+
+    // If buttonValue is a number then call handleNumberClick
+    if (isNumber(buttonValue)) {
       handleNumberClick(buttonValue);
     }
 
-
-    // If buttonvalue is not a number then call handleopeartion
+    // If buttonValue is not a number then call handleOpeartion
   }
 }
 
 function handleNumberClick(buttonValue) {
   const currentValue = screenResultElement.textContent;
 
-  // prevent the user from enterting more than one .
-  if (screenResultElement.textContent.includes('.') && buttonValue === '.') {
-    return;
-  }
-
   if (currentValue === '0') {
-    // handle the case to allow the user to enter floating numbers!
-    if (buttonValue === '.') {
-      screenResultElement.textContent += buttonValue;
-      return;
-    }
     screenResultElement.textContent = buttonValue;
   } else {
     screenResultElement.textContent += buttonValue;
   }
 }
 
+function handleDecimalPointClick(buttonValue) {
+  const currentValue = screenResultElement.textContent;
 
-
+  // If number already have a decimal point then return and dont do anything
+  if (currentValue.includes('.')) {
+    return;
+  }
+  // Else add the decimal point to the number
+  screenResultElement.textContent += buttonValue;
+}
