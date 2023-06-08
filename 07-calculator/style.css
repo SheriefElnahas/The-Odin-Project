@@ -113,6 +113,9 @@ main {
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
 }
+.screen__last:empty {
+  padding: 2rem 0 3.3rem;
+}
 .screen__result {
   font-size: 4rem;
 }
