@@ -107,13 +107,13 @@ main {
   margin-bottom: 2.4rem;
   padding: 2rem 3.2rem 2.5rem;
 }
-.calculator__last {
+.screen__last {
   font-size: 2rem;
   padding: 1rem 0 2rem;
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
 }
-.calculator__result {
+.screen__result {
   font-size: 4rem;
 }
 
@@ -194,11 +194,11 @@ main {
   .calculator__screen {
     padding: 1.5rem 2.4rem 1.5rem;
   }
-  .calculator__last {
+  .screen__last {
     font-size: 1.7rem;
     padding: 1rem 0 2rem;
   }
-  .calculator__result {
+  .screen__result {
     font-size: 3rem;
   }
 
